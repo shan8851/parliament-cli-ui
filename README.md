@@ -2,7 +2,7 @@
 
 Landing page for **parliament-cli**.
 
-- Live: https://parliament-cli.xyz
+- Live: https://parliament-cli-ui.vercel.app
 - CLI repo: https://github.com/shan8851/parliament-cli
 - UI repo: https://github.com/shan8851/parliament-cli-ui
 - npm: https://www.npmjs.com/package/@shan8851/parliament-cli

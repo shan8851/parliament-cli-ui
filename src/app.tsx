@@ -45,7 +45,7 @@ export const App = () => (
       <nav className="top-links">
         <a href="https://github.com/shan8851/parliament-cli" target="_blank" rel="noreferrer">GitHub</a>
         <a href="https://www.npmjs.com/package/@shan8851/parliament-cli" target="_blank" rel="noreferrer">npm</a>
-        <a href="https://parliament-cli.xyz" target="_blank" rel="noreferrer">Live</a>
+        <a href="https://parliament-cli-ui.vercel.app" target="_blank" rel="noreferrer">Live</a>
       </nav>
     </header>
 
