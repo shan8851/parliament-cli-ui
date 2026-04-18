@@ -1,0 +1,255 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --bg: #0d1320;
+  --surface: rgba(13, 24, 43, 0.75);
+  --surface-border: rgba(173, 217, 255, 0.18);
+  --text-main: #edf4ff;
+  --text-dim: #b3c6de;
+  --accent: #85f6c5;
+  --accent-2: #f6d285;
+  --terminal: #090f18;
+  --terminal-border: #253047;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: radial-gradient(circle at 20% 20%, #1a2b49 0%, transparent 45%),
+    radial-gradient(circle at 85% 10%, #2f2a4f 0%, transparent 35%),
+    linear-gradient(180deg, #09101a 0%, #0f1828 100%);
+  color: var(--text-main);
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.site-shell {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 24px 20px 64px;
+  position: relative;
+}
+
+.backdrop {
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  inset: 16px;
+  pointer-events: none;
+  position: fixed;
+}
+
+.topbar {
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background: rgba(9, 16, 26, 0.7);
+  border: 1px solid var(--surface-border);
+  border-radius: 999px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  padding: 10px 14px;
+  position: sticky;
+  top: 12px;
+  z-index: 10;
+}
+
+.brand-mark {
+  font-size: 1.2rem;
+}
+
+.brand-name {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.top-links {
+  display: flex;
+  gap: 12px;
+  margin-left: auto;
+}
+
+.top-links a,
+footer a,
+.links-card a,
+.hero-cta-links a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.top-links a:hover,
+footer a:hover,
+.links-card a:hover,
+.hero-cta-links a:hover {
+  text-decoration: underline;
+}
+
+main {
+  display: grid;
+  gap: 18px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: 18px;
+  box-shadow: 0 24px 80px rgba(3, 7, 18, 0.45);
+  padding: 22px;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  background: linear-gradient(120deg, transparent 0%, rgba(133, 246, 197, 0.11) 45%, transparent 100%);
+  content: "";
+  height: 280%;
+  pointer-events: none;
+  position: absolute;
+  right: -10%;
+  top: -90%;
+  transform: rotate(-18deg);
+  width: 55%;
+}
+
+.eyebrow {
+  color: var(--accent-2);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+h1,
+h2 {
+  font-family: "Sorts Mill Goudy", serif;
+  letter-spacing: 0.01em;
+  margin: 10px 0 12px;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.08;
+  max-width: 18ch;
+}
+
+h2 {
+  font-size: clamp(1.4rem, 2.8vw, 2rem);
+}
+
+.lead,
+.command-item p,
+.small-note,
+footer {
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+.install-line {
+  background: rgba(2, 11, 20, 0.65);
+  border: 1px solid var(--terminal-border);
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 0.95rem;
+  padding: 10px 12px;
+}
+
+.hero-cta-row {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.hero-cta-links {
+  display: flex;
+  gap: 12px;
+}
+
+.command-list {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.command-item {
+  background: rgba(7, 13, 23, 0.55);
+  border: 1px solid rgba(133, 246, 197, 0.2);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.command-item code,
+.bullet-list code {
+  color: var(--accent);
+}
+
+.command-item p {
+  font-size: 0.92rem;
+  margin: 8px 0 0;
+}
+
+.grid-two {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.bullet-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.terminal {
+  background: var(--terminal);
+  border: 1px solid var(--terminal-border);
+  border-radius: 12px;
+  color: #dff8e8;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  overflow-x: auto;
+  padding: 14px;
+}
+
+.small-note {
+  font-size: 0.88rem;
+  margin-top: 10px;
+}
+
+.link-grid {
+  display: grid;
+  gap: 8px;
+}
+
+footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .topbar {
+    border-radius: 14px;
+    flex-wrap: wrap;
+    position: static;
+  }
+
+  .top-links {
+    margin-left: 0;
+    width: 100%;
+  }
+}
