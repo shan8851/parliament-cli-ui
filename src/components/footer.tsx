@@ -37,7 +37,7 @@ export const Footer = () => (
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-text-muted hover:text-accent transition-colors"
         >
-          ClawHub
+          🦞 ClawHub
         </a>
         <span className="text-text-dim">MIT License</span>
       </div>

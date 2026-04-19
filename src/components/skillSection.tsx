@@ -5,7 +5,7 @@ export const SkillSection = () => (
     <div className="max-w-6xl mx-auto">
       <div className="text-center mb-10">
         <h2 className="font-heading text-3xl md:text-4xl text-text tracking-tight mb-3">
-          Agent Skill
+          🦞 Agent Skill
         </h2>
         <p className="text-text-muted text-lg max-w-2xl mx-auto">
           Install the skill so your agent knows every command. Works with
